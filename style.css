@@ -33,6 +33,7 @@ header {
     left: 0;
     background: rgba(7, 7, 15, 0.5);
     backdrop-filter: blur(4px);
+    z-index: 16;
 }
 
 nav {
@@ -89,6 +90,7 @@ nav > button > svg {
 
 main {
     background: rgba(7, 7, 15, 0.25);
+    backdrop-filter: blur(4px);
 }
 
 main > section {
@@ -182,6 +184,7 @@ footer {
     gap: 2rem;
     align-items: start;
     background: rgba(7, 7, 15, 0.75);
+    backdrop-filter: blur(4px);
 }
 
 footer * {

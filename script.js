@@ -1,7 +1,10 @@
 console.log('Script initialized');
 document.addEventListener('DOMContentLoaded', (_event) => {
     console.log('DOMContentLoaded');
-    updateBodyTransparency = () => {document.querySelector('body > main').style.background = `rgba(7, 7, 15, ${window.scrollY >= (window.innerHeight / 4)? (window.scrollY <= window.innerHeight? window.scrollY / window.innerHeight : 1) : 0.25})`;};
+    updateBodyTransparency = () => {
+        document.querySelector('body > main').style.background = `rgba(7, 7, 15, ${window.scrollY >= (window.innerHeight / 4)? (window.scrollY <= window.innerHeight? window.scrollY / window.innerHeight : 1) : 0.25})`;
+        document.querySelector('body > main').style.backdropFilter = `blur(${window.scrollY >= (window.innerHeight / 4)? (window.scrollY <= window.innerHeight? (window.scrollY / window.innerHeight) * 4 : 4) : 0}px)`;
+    };
     updateBodyTransparency();
     window.addEventListener('scroll', (_event) => {
         updateBodyTransparency();
