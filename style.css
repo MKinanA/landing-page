@@ -3,6 +3,8 @@
     color: #ffffff;
     transition: all 0.25s ease-out;
     scroll-behavior: smooth;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 :root {
@@ -201,7 +203,7 @@ footer > div {
     flex-direction: column;
     justify-content: start;
     align-items: end;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 footer > div > * {
@@ -240,15 +242,14 @@ footer > div > *:hover {
         align-items: start;
         background: rgba(7, 7, 15, 0.5);
         backdrop-filter: blur(4px);
-        padding: 1rem;
-        padding-right: var(--screen-padding-vertical);
+        padding: 1.25rem var(--screen-padding-vertical) 1.25rem 1.5rem;
         border-radius: 0 0 0 0.5rem;
         opacity: 0;
     }
 
     header > nav > div > * {
         width: 100%;
-        text-align: right;
+        text-align: start;
     }
 
     header > nav > div.show {
